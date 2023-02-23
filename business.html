@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/business.css">
+</head>
+<body>
+    <div class="container-fluid"> 
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Business Card Generator</h1>
+            </div>
+            <button class="print" onclick="printCard()">Print</button>
+            <div class="col-sm-3">
+                <input type="button" class="clear" onclick="formReset()" value="Clear">
+            </div>
+        </div>
+    </div>
+   <div class="container-fluid">
+    <div class="col-sm-12 col-md-6 background">
+        <form id="cardInfo" class="form-horizontal">
+            <div class="form-group">
+                <label for="inputCompany" class="col-sm-3 control-label">Company Name:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="from-control" id="inputCompany" onkeyup="printCompany()">
+                </div>
+            </div>
+       
+            <div class="form-group">
+                <label for="inputMessage" class="col-sm-3 control-label">Company Message:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="from-control" id="inputMessage" onkeyup="printMessage()">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputBackground" class="col-sm-3 control-label">background Color:</label>
+                <div class="col-sm-9">
+                    <input type="color" class="from-control" id="inputBackground" value="#1f6775" onchange="backgroundColor()">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputtext" class="col-sm-3 control-label">Text Color:</label>
+                <div class="col-sm-9">
+                    <input type="color" class="from-control" id="inputtext" value="#262626" onchange="TextColor()">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="text-align" class="col-sm-3 control-label">Text-align:</label>
+                <div class="col-sm-9">
+                    <input type="button" class="btn btn-info" id="btn1" value="Right" onclick="textAlign1()">
+                    <input type="button" class="btn btn-info" id="btn2" value="Center" onclick="textAlign2()">
+                    <input type="button" class="btn btn-info" id="btn3" value="Left" onclick="textAlign3()">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="col-sm-3 control-label">Your Name:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="from-control" id="inputName" onkeyup="printName()">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputJobTitle" class="col-sm-3 control-label">Job Title:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="from-control" id="inputJobTitle" onkeyup="printJob()">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail" class="col-sm-3 control-label">Email:</label>
+                <div class="col-sm-9">
+                    <input type="email  " class="from-control" id="inputEmail" onkeyup="printEmail()">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPhone" class="col-sm-3 control-label">Phone Number:</label>
+                <div class="col-sm-9">
+                    <input type="numbers" class="from-control" id="inputPhone" onkeyup="printPhone()">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="border" class="col-sm-3 control-label">Shape:</label>
+                <div class="col-sm-9">
+                    <input type="range" onchange="changeBorderRadius(event)">
+                    <!-- <input type="dropdown" class="from-control" id="border-radius" onchange="borderRadius()"> -->
+                </div>
+            </div>
+        </form>
+        <div class="col-sm-12,col-md-6">
+            <div id="card">
+                <h3 id="outputCompany">Company Name</h3>
+                <p id="outputMessage" class="small">Company message</p><hr>
+                <p id="outputName" class="small"> Your Name</p>
+                <p id="outputJob" class="small">Job title</p>
+                <p id="outputEmail" class="small"> Email</p>
+                 
+                <p id="outputPhone" class="small">Phone</p>
+            </div>
+        </div>
+    </div>
+   </div>
+   <script src="/business.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+body {
+    height:100%;
+}
+#card{
+    border:2px red solid;
+    margin-top: -36em;
+    margin-left: 57em;
+    height: 250px;
+    width: 400px;
+    border: 1px solid;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    padding: 20px 0;
+}
+
+#cardInfo{
+    background: rgb(197, 120, 120);
+    padding: 30px;
+    margin-bottom: 30px;
+    justify-items: center;
+    width: 39em;
+    margin-left: 16em;
+}
+#inputtext{
+    padding: 0;
+    width: 12em;
+}
+#inputBackground{
+    padding: 0;
+    width: 12em;
+}
+.print{
+    width: 6em;
+}
+@media print {
+    .form-horizontal { 
+        visibility: hidden;
+     }
+     .background{
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+     }
+      .card {
+       position: absolute;
+       margin: 10px;
+       top: 50%;
+       right: 50%;
+       transform: translate(-50%, -50%);
+       align-items: center;
+       color: visible;
+     } 
+     #inputtext{
+        background-color: aqua;
+     }
+     .print{
+        visibility: hidden;
+     }
+     h1{
+        visibility: hidden;
+     }
+     .clear{
+        visibility: hidden;
+     }
+
+}
